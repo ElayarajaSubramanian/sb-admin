@@ -236,7 +236,11 @@ const Topbar = () => {
             <span class="mr-2 d-none d-lg-inline text-gray-600 small">
               Elayaraja Subramanian
             </span>
-            <img class="img-profile rounded-circle" src="/img/profile.jpg" />
+            <img
+              class="img-profile rounded-circle"
+              src="/img/profile.jpg"
+              alt="..."
+            />
           </Link>
 
           <div
