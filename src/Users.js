@@ -1,7 +1,6 @@
 import axios from "axios";
-import React, { useContext, useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import UserContext from "./UserContext";
 
 const Users = () => {
   const [userData, setUserData] = useState([]);
@@ -14,7 +13,7 @@ const Users = () => {
     }
     fetchData();
   }, []);
-  const userContext = useContext(UserContext);
+  /* const userContext = useContext(UserContext); */
   return (
     <div className="container-fluid">
       <div className="d-sm-flex align-items-center justify-content-between mb-4">

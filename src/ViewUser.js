@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 
 const ViewUser = () => {
+  const params = useParams();
   const [userData, setUserData] = useState({});
   useEffect(() => {
     async function fetchData() {
@@ -13,7 +14,7 @@ const ViewUser = () => {
     }
     fetchData();
   }, []);
-  const params = useParams();
+
   return (
     <div className="container-fluid">
       View User

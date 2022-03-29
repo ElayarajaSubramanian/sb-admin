@@ -1,9 +1,10 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import { useParams } from "react-router-dom";
 import axios from "axios";
 import { useFormik } from "formik";
 
 const EditUser = () => {
+  const params = useParams();
   const formik = useFormik({
     initialValues: {
       name: "",
@@ -27,7 +28,7 @@ const EditUser = () => {
       );
     }
   });
-  const [userData, setUserData] = useState({});
+  /* const [userData, setUserData] = useState({}); */
   useEffect(() => {
     async function fetchData() {
       let user = await axios.get(
@@ -37,7 +38,7 @@ const EditUser = () => {
     }
     fetchData();
   }, []);
-  const params = useParams();
+
   return (
     <form className="container" onSubmit={formik.handleSubmit}>
       <div className="row">
