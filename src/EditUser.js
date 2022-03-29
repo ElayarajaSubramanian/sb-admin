@@ -37,7 +37,7 @@ const EditUser = () => {
       formik.setValues(user.data);
     }
     fetchData();
-  }, []);
+  }, [formik, params.id]);
 
   return (
     <form className="container" onSubmit={formik.handleSubmit}>
