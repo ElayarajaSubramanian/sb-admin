@@ -1,23 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from "react";
+import { Outlet } from "react-router-dom";
+import "./App.css";
+import Sidebar from "./components/Sidebar";
+import Topbar from "./components/Topbar";
+import { UserProvider } from "./UserContext";
 
 function App() {
+  const [users, setUsers] = useState([]);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div id="wrapper">
+      <UserProvider value={{ users, setUsers }}>
+        <Sidebar />
+        <div id="content-wrapper" className="d-flex flex-column">
+          <div id="content">
+            <Topbar />
+            <Outlet />
+          </div>
+        </div>
+      </UserProvider>
     </div>
   );
 }
