@@ -48,9 +48,8 @@ const Dashboard = () => {
                 Earnings Overview
               </h6>
               <div className="dropdown no-arrow">
-                <a
+                <button
                   className="dropdown-toggle"
-                  href="#"
                   role="button"
                   id="dropdownMenuLink"
                   data-toggle="dropdown"
@@ -58,22 +57,16 @@ const Dashboard = () => {
                   aria-expanded="false"
                 >
                   <i className="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
-                </a>
+                </button>
                 <div
                   className="dropdown-menu dropdown-menu-right shadow animated--fade-in"
                   aria-labelledby="dropdownMenuLink"
                 >
                   <div className="dropdown-header">Dropdown Header:</div>
-                  <a className="dropdown-item" href="#">
-                    Action
-                  </a>
-                  <a className="dropdown-item" href="#">
-                    Another action
-                  </a>
+                  <button className="dropdown-item">Action</button>
+                  <button className="dropdown-item">Another action</button>
                   <div className="dropdown-divider"></div>
-                  <a className="dropdown-item" href="#">
-                    Something else here
-                  </a>
+                  <button className="dropdown-item">Something else here</button>
                 </div>
               </div>
             </div>
@@ -107,9 +100,8 @@ const Dashboard = () => {
                 Revenue Sources
               </h6>
               <div className="dropdown no-arrow">
-                <a
+                <button
                   className="dropdown-toggle"
-                  href="#"
                   role="button"
                   id="dropdownMenuLink"
                   data-toggle="dropdown"
@@ -117,22 +109,16 @@ const Dashboard = () => {
                   aria-expanded="false"
                 >
                   <i className="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
-                </a>
+                </button>
                 <div
                   className="dropdown-menu dropdown-menu-right shadow animated--fade-in"
                   aria-labelledby="dropdownMenuLink"
                 >
                   <div className="dropdown-header">Dropdown Header:</div>
-                  <a className="dropdown-item" href="#">
-                    Action
-                  </a>
-                  <a className="dropdown-item" href="#">
-                    Another action
-                  </a>
+                  <button className="dropdown-item">Action</button>
+                  <button className="dropdown-item">Another action</button>
                   <div className="dropdown-divider"></div>
-                  <a className="dropdown-item" href="#">
-                    Something else here
-                  </a>
+                  <button className="dropdown-item">Something else here</button>
                 </div>
               </div>
             </div>
