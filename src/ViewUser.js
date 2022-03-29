@@ -4,11 +4,14 @@ import { useParams } from "react-router-dom";
 
 const ViewUser = () => {
   const [userData, setUserData] = useState({});
-  useEffect(async () => {
-    let user = await axios.get(
-      `https://6243424f3da3ac772b00a37a.mockapi.io/users/${params.id}`
-    );
-    setUserData(user.data);
+  useEffect(() => {
+    async function fetchData() {
+      let user = await axios.get(
+        `https://6243424f3da3ac772b00a37a.mockapi.io/users/${params.id}`
+      );
+      setUserData(user.data);
+    }
+    fetchData();
   }, []);
   const params = useParams();
   return (

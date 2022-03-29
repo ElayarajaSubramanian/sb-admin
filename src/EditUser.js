@@ -28,11 +28,14 @@ const EditUser = () => {
     }
   });
   const [userData, setUserData] = useState({});
-  useEffect(async () => {
-    let user = await axios.get(
-      `https://6243424f3da3ac772b00a37a.mockapi.io/users/${params.id}`
-    );
-    formik.setValues(user.data);
+  useEffect(() => {
+    async function fetchData() {
+      let user = await axios.get(
+        `https://6243424f3da3ac772b00a37a.mockapi.io/users/${params.id}`
+      );
+      formik.setValues(user.data);
+    }
+    fetchData();
   }, []);
   const params = useParams();
   return (

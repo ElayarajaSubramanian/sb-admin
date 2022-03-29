@@ -5,11 +5,14 @@ import UserContext from "./UserContext";
 
 const Users = () => {
   const [userData, setUserData] = useState([]);
-  useEffect(async () => {
-    let users = await axios.get(
-      "https://6243424f3da3ac772b00a37a.mockapi.io/users"
-    );
-    setUserData(users.data);
+  useEffect(() => {
+    async function fetchData() {
+      let users = await axios.get(
+        "https://6243424f3da3ac772b00a37a.mockapi.io/users"
+      );
+      setUserData(users.data);
+    }
+    fetchData();
   }, []);
   const userContext = useContext(UserContext);
   return (

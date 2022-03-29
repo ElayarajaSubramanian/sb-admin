@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Topbar = () => {
   return (
@@ -29,8 +30,9 @@ const Topbar = () => {
 
       <ul class="navbar-nav ml-auto">
         <li class="nav-item dropdown no-arrow d-sm-none">
-          <button
+          <Link
             class="nav-link dropdown-toggle"
+            to="/"
             id="searchDropdown"
             role="button"
             data-toggle="dropdown"
@@ -38,7 +40,7 @@ const Topbar = () => {
             aria-expanded="false"
           >
             <i class="fas fa-search fa-fw"></i>
-          </button>
+          </Link>
 
           <div
             class="dropdown-menu dropdown-menu-right p-3 shadow animated--grow-in"
@@ -64,8 +66,9 @@ const Topbar = () => {
         </li>
 
         <li class="nav-item dropdown no-arrow mx-1">
-          <button
+          <Link
             class="nav-link dropdown-toggle"
+            to="/"
             id="alertsDropdown"
             role="button"
             data-toggle="dropdown"
@@ -75,14 +78,14 @@ const Topbar = () => {
             <i class="fas fa-bell fa-fw"></i>
 
             <span class="badge badge-danger badge-counter">3+</span>
-          </button>
+          </Link>
 
           <div
             class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in"
             aria-labelledby="alertsDropdown"
           >
             <h6 class="dropdown-header">Alerts Center</h6>
-            <button class="dropdown-item d-flex align-items-center">
+            <Link class="dropdown-item d-flex align-items-center" to="/">
               <div class="mr-3">
                 <div class="icon-circle bg-primary">
                   <i class="fas fa-file-alt text-white"></i>
@@ -94,8 +97,8 @@ const Topbar = () => {
                   A new monthly report is ready to download!
                 </span>
               </div>
-            </button>
-            <button class="dropdown-item d-flex align-items-center">
+            </Link>
+            <Link class="dropdown-item d-flex align-items-center" to="/">
               <div class="mr-3">
                 <div class="icon-circle bg-success">
                   <i class="fas fa-donate text-white"></i>
@@ -105,8 +108,8 @@ const Topbar = () => {
                 <div class="small text-gray-500">December 7, 2019</div>
                 $290.29 has been deposited into your account!
               </div>
-            </button>
-            <button class="dropdown-item d-flex align-items-center">
+            </Link>
+            <Link class="dropdown-item d-flex align-items-center" to="/">
               <div class="mr-3">
                 <div class="icon-circle bg-warning">
                   <i class="fas fa-exclamation-triangle text-white"></i>
@@ -117,16 +120,17 @@ const Topbar = () => {
                 Spending Alert: We've noticed unusually high spending for your
                 account.
               </div>
-            </button>
-            <button class="dropdown-item text-center small text-gray-500">
+            </Link>
+            <Link class="dropdown-item text-center small text-gray-500" to="/">
               Show All Alerts
-            </button>
+            </Link>
           </div>
         </li>
 
         <li class="nav-item dropdown no-arrow mx-1">
-          <button
+          <Link
             class="nav-link dropdown-toggle"
+            to="/"
             id="messagesDropdown"
             role="button"
             data-toggle="dropdown"
@@ -136,14 +140,14 @@ const Topbar = () => {
             <i class="fas fa-envelope fa-fw"></i>
 
             <span class="badge badge-danger badge-counter">7</span>
-          </button>
+          </Link>
 
           <div
             class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in"
             aria-labelledby="messagesDropdown"
           >
             <h6 class="dropdown-header">Message Center</h6>
-            <button class="dropdown-item d-flex align-items-center">
+            <Link class="dropdown-item d-flex align-items-center" to="/">
               <div class="dropdown-list-image mr-3">
                 <img
                   class="rounded-circle"
@@ -159,8 +163,8 @@ const Topbar = () => {
                 </div>
                 <div class="small text-gray-500">Emily Fowler · 58m</div>
               </div>
-            </button>
-            <button class="dropdown-item d-flex align-items-center">
+            </Link>
+            <Link class="dropdown-item d-flex align-items-center" to="/">
               <div class="dropdown-list-image mr-3">
                 <img
                   class="rounded-circle"
@@ -176,8 +180,8 @@ const Topbar = () => {
                 </div>
                 <div class="small text-gray-500">Jae Chun · 1d</div>
               </div>
-            </button>
-            <button class="dropdown-item d-flex align-items-center">
+            </Link>
+            <Link class="dropdown-item d-flex align-items-center" to="/">
               <div class="dropdown-list-image mr-3">
                 <img
                   class="rounded-circle"
@@ -193,8 +197,8 @@ const Topbar = () => {
                 </div>
                 <div class="small text-gray-500">Morgan Alvarez · 2d</div>
               </div>
-            </button>
-            <button class="dropdown-item d-flex align-items-center">
+            </Link>
+            <Link class="dropdown-item d-flex align-items-center" to="/">
               <div class="dropdown-list-image mr-3">
                 <img
                   class="rounded-circle"
@@ -210,18 +214,19 @@ const Topbar = () => {
                 </div>
                 <div class="small text-gray-500">Chicken the Dog · 2w</div>
               </div>
-            </button>
-            <button class="dropdown-item text-center small text-gray-500">
+            </Link>
+            <Link class="dropdown-item text-center small text-gray-500" to="/">
               Read More Messages
-            </button>
+            </Link>
           </div>
         </li>
 
         <div class="topbar-divider d-none d-sm-block"></div>
 
         <li class="nav-item dropdown no-arrow">
-          <button
+          <Link
             class="nav-link dropdown-toggle"
+            to="/"
             id="userDropdown"
             role="button"
             data-toggle="dropdown"
@@ -232,33 +237,34 @@ const Topbar = () => {
               Elayaraja Subramanian
             </span>
             <img class="img-profile rounded-circle" src="/img/profile.jpg" />
-          </button>
+          </Link>
 
           <div
             class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
             aria-labelledby="userDropdown"
           >
-            <button class="dropdown-item">
+            <Link class="dropdown-item" to="/">
               <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
               Profile
-            </button>
-            <button class="dropdown-item">
+            </Link>
+            <Link class="dropdown-item" to="/">
               <i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>
               Settings
-            </button>
-            <button class="dropdown-item">
+            </Link>
+            <Link class="dropdown-item" to="/">
               <i class="fas fa-list fa-sm fa-fw mr-2 text-gray-400"></i>
               Activity Log
-            </button>
+            </Link>
             <div class="dropdown-divider"></div>
-            <button
+            <Link
               class="dropdown-item"
+              to="/"
               data-toggle="modal"
               data-target="#logoutModal"
             >
               <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
               Logout
-            </button>
+            </Link>
           </div>
         </li>
       </ul>
