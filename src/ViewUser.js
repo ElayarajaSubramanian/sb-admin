@@ -13,7 +13,7 @@ const ViewUser = () => {
       setUserData(user.data);
     }
     fetchData();
-  }, [params.id]);
+  }, []);
 
   return (
     <div className="container-fluid">
